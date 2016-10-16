@@ -1,0 +1,81 @@
+mixin dev_head(page_title)
+    head
+        title=page_title
+        | <!-- saved from url=(0014)about:internet -->
+        meta(charset='utf-8')
+        meta(name='viewport', content="width=device-width, initial-scale=1.0")
+        meta(name="SKYPE_TOOLBAR", content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="format-detection", content="telephone=no")
+
+        link(rel='stylesheet', href='styles/main_global.css', media='all')
+        
+mixin loop_while(counter)
+    -i=0;
+    while i < counter
+        -i++;
+        block
+
+mixin link_o_span (is_link, link_href, cls, txt)
+    - if (is_link)
+        a(class=cls href=link_href)!= txt
+            block
+    - else
+        span(class=cls)!= txt
+            block
+        
+mixin header(active_menu)
+    .nav-overlay.closeMenu
+    div.header: .section_inner
+        .open-menu_btn.openMenu
+        .logo_block
+            a.logo.menuLink(href='#about')
+                img(src='i/logo.png')
+        ul.auth_block
+            li: a.inner-link(href='#')
+                span.icon-user.inner-link_icon
+                span.inner-link_text Вход
+            li: a.inner-link(href='#')
+                span.inner-link_text Регистрация
+                        
+mixin header_menu(active_menu, index_link)
+    .header-menu_holder
+        .nav
+            .main-menu_holder
+                ul.main_menu
+                    li.menu_item(class = active_menu == 1 ? 'active' : '')
+                        +link_o_span(!(active_menu == 1), '#about', 'menu_link menuLink', '')
+                            span.mb О сервисе
+                    li.menu_item(class = active_menu == 2 ? 'active' : '')
+                        +link_o_span(!(active_menu == 2), '#benefits', 'menu_link menuLink', '')
+                            span.mb Какую ценность даёт мне сервис?
+                    li.menu_item(class = active_menu == 3 ? 'active' : '')
+                        +link_o_span(!(active_menu == 3), '#troubles', 'menu_link menuLink', '')
+                            span.mb О каких проблемах расскажет сервис?
+                    li.menu_item(class = active_menu == 4 ? 'active' : '')
+                        +link_o_span(!(active_menu == 4), '#info', 'menu_link menuLink', '')
+                            span.mb Какую информацию предоставит сервис?
+                    li.menu_item(class = active_menu == 5 ? 'active' : '')
+                        +link_o_span(!(active_menu == 5), '#detailes', 'menu_link menuLink', '')
+                            span.mb Подробная информация о каждой странице
+                    li.menu_item(class = active_menu == 6 ? 'active' : '')
+                        +link_o_span(!(active_menu == 6), '#errors', 'menu_link menuLink', '')
+                            span.mb Список ошибок сайта
+                    li.menu_item(class = active_menu == 7 ? 'active' : '')
+                        +link_o_span(!(active_menu == 7), '#structure', 'menu_link menuLink', '')
+                            span.mb Структура сайта
+                    li.menu_item(class = active_menu == 8 ? 'active' : '')
+                        +link_o_span(!(active_menu == 8), '#audit', 'menu_link menuLink', '')
+                            span.mb Аудит сайта
+                    li.menu_item(class = active_menu == 9 ? 'active' : '')
+                        +link_o_span(!(active_menu == 9), '#subscribe', 'menu_link menuLink', '')
+                            span.mb Попробуйте сервис в действии
+
+
+mixin scripts()
+    //-script(src='js/min/all.min.js')
+    //-script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true')
+    script(src='js/jquery1.10.js')
+    script(src='js/jquery.backstretch.js')
+    script(src='js/jquery.fullPage.js')
+    script(src='js/script.js')

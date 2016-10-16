@@ -1,0 +1,63 @@
+//************  buttons
+
+.btn_v1 {
+  height: 58px;
+
+  &.check_btn {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 14px 10px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    text-align: center;
+
+    @include respond-to-max($resp_step_3) {
+      height: 50px;
+      padding: 10px;
+    }
+  }
+}
+
+.btn_v2 {
+
+  &.subscribe_btn {
+    text-align: center;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+  }
+}
+
+.btn_blue_transp {
+  border: 1px solid #29abe2;
+  color: #fff;
+}
+
+.green_btn {
+  color: #fefefe;
+  background: #22b573;
+}
+
+.btn_red {
+  @include transition_all(background .3s);
+  color: #fff;
+  background: #e7624c;
+
+  &:hover {
+    background: darken(#e7624c, 5%);
+  }
+
+}
+
+.yellow_btn {
+  background: #fbe622;
+  color: #000;
+  box-shadow: 0 3px 5px #7f7f7f;
+}
+
+

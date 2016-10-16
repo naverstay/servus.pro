@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'OpenSansLight';
+  src:  url(../fonts/opensans-light-webfont.eot);
+  src:  url(../fonts/opensans-light-webfont.eot?#iefix) format("embedded-opentype"),
+        url(../fonts/opensans-light-webfont.woff) format("woff"),
+        url(../fonts/opensans-light-webfont.ttf) format("truetype"),
+        url(../fonts/opensans-light-webfont.svg) format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PFDinTextCondProXThin';
+  src:  url(../fonts/pfdintextcondproxthin.eot);
+  src:  url(../fonts/pfdintextcondproxthin.eot?#iefix) format("embedded-opentype"),
+        url(../fonts/pfdintextcondproxthin.woff) format("woff"),
+        url(../fonts/pfdintextcondproxthin.ttf) format("truetype"),
+        url(../fonts/pfdintextcondproxthin.svg) format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PFDinTextCondProReg';
+  src:  url(../fonts/pfdintextcondproregular.eot);
+  src:  url(../fonts/pfdintextcondproregular.eot?#iefix) format("embedded-opentype"),
+        url(../fonts/pfdintextcondproregular.woff) format("woff"),
+        url(../fonts/pfdintextcondproregular.ttf) format("truetype"),
+        url(../fonts/pfdintextcondproregular.svg) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}

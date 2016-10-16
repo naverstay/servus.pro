@@ -1,0 +1,246 @@
+//*************************** header
+
+.header {
+  @include transition_all(background .3s);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  line-height: 80px;
+  z-index: 16;
+  background: transparentize(#54545b, .25);
+
+  .section_inner {
+    padding: 0 70px;
+    position: relative;
+  }
+
+  .open_menu & {
+    background: #54545b;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    line-height: 90px;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    line-height: 100px;
+    background: none;
+
+    .section_inner {
+      padding: 0 17px;
+    }
+  }
+}
+
+.logo_block {
+  text-align: center;
+
+  @include respond-to-min($resp_step_3) {
+    float: left;
+    text-align: left;
+  }
+
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  max-width: 150px;
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    max-width: 100%;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    max-width: none;
+  }
+}
+
+.auth_block {
+  float: right;
+
+  > li {
+    float: left;
+    padding-left: 12px;
+  }
+
+  .inner-link {
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    letter-spacing: .75px;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+      margin-top: 10px;
+    }
+  }
+
+  @include respond-to-max($resp_step_3) {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .inner-link .inner-link_icon {
+      width: 32px;
+      height: 32px;
+      margin: 0 7px 0 0;
+
+      &:before {
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+
+    .inner-link .inner-link_text {
+      display: none;
+    }
+
+  }
+}
+
+.callback_block {
+  float: right;
+}
+
+.header-menu_holder {
+  @include transition_all(transform .3s, background .3s);
+  @include transform_translate(-100%, 0);
+  position: fixed;
+  top: 80px;
+  padding-top: 5px;
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  max-width: 100%;
+  z-index: 15;
+  background: transparentize(#54545b, .25);
+
+  .open_menu & {
+    @include transform_translate(0, 0);
+    background: #54545b;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    top: 90px;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    top: 100px;
+  }
+}
+
+.nav {
+  max-height: 100%;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.nav-overlay {
+  @include transition_all(opacity .3s);
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  z-index: 12;
+  opacity: 0;
+  background: #54545b;
+  visibility: hidden;
+  pointer-events: none;
+
+  .ie9 & {
+    display: none;
+  }
+  
+  .open_menu & {
+    opacity: .75;
+    pointer-events: all;
+    display: block;
+    visibility: visible;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    top: 90px;
+  }
+
+  @include respond-to-min($resp_step_3) {
+    top: 100px;
+  }
+
+}
+
+.open-menu_btn {
+  @extend %icon_pseudo;
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+
+  &:before {
+    content: $icon-menu;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .open_menu & {
+    &:before {
+      content: $icon-close;
+    }
+  }
+
+  @include respond-to-min($resp_step_3) {
+    display: none;
+  }
+
+  @include respond-to-max-h-max($resp_step_3, $resp_step_h_3) {
+    display: block;
+  }
+}
+
+// *********  menu
+
+.main_menu {
+  text-align: left;
+
+  @include respond-to-min($resp_step_2) {
+
+  }
+}
+
+.main_m_item {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.menu_link {
+  @include transition_all(background .3s, color .3s);
+  cursor: pointer;
+  position: relative;
+  display: block;
+  padding: 0 22px;
+  color: #fff;
+  font: 15px/36px $PFDinTextCondProReg;
+  text-decoration: none;
+
+  .active & {
+    cursor: default;
+    background: #9797a9;
+    color: #000;
+  }
+}
+

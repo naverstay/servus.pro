@@ -1,0 +1,146 @@
+include mixins.pug
+doctype html
+html(lang='ru')
+    +dev_head('Servus главная')
+
+    body
+        .wrapper
+            +header()
+            
+            +header_menu(1)
+                            
+            div.main_slider.pageSlider
+                #about.slide_section.section-v1.firstPage(data-bs='i/section_1.jpg')
+                    .scroll-down_btn.scrollDown
+                    .section_inner.text_center
+                        .about-block
+                            h2.section_caption О сервисе
+                            p Servus.pro - сервис для оптимизаторов, который проиндексирует продвигаемый сайт и укажет на внутренние проблемы.
+                            form(action='#')
+                                .form_row
+                                    .form_cell
+                                        input.f_input_v1(placeholder='Введите URL сайта')
+                                    .form_cell
+                                        button.btn_v1.check_btn.btn_red Начать проверку
+                                    
+                #benefits.slide_section.section-v2.secondPage(data-bs='i/section_2.jpg')
+                    .scroll-down_btn.scrollDown
+                    .section_inner
+                        h2.section_caption.text_center Какую ценность даёт мне сервис?
+                        ul.benefit-list
+                            li
+                                .benefit-item
+                                    .benefit-item_caption Быстрый старт
+                                    p Не знаете с чего начать, много термином и не понятно, за что хвататься? Сервис решает эту проблему: мы покажем вам топ ошибок, с которых
+                            li
+                                .benefit-item
+                                    .benefit-item_caption Экономия времени
+                                    p Вам не нужно самим искать проблемы по всему сайту. Мы укажем их точное количество и степень важности исправления каждой
+                            li
+                                .benefit-item
+                                    .benefit-item_caption Индекс оптимизированности
+                                    p На основе данных, полученных при индексации сайта мы составляем индекс оптимизированности, который определяет, насколько ваш сайт хорошо оптимизирован.
+                        
+                #troubles.slide_section.section-v3.thirdPage(data-bs='i/section_3.jpg')
+                    .scroll-down_btn.scrollDown
+                    .section_inner
+                        h2.section_caption 
+                            span О каких проблемах 
+                            span.dt_hidden  <br> 
+                            span  расскажет сервис?
+                        
+                        ul.trouble-list
+                            li
+                                .trouble-item   
+                                    .trouble-icon
+                                        img(src='i/trouble-1.png')
+                                    .trouble-item_caption Все о метатегах сайта
+                                    p А именно, вы узнаете, на каких страницах                             пустой title, где слишком короткий description и пр.
+                            li
+                                .trouble-item   
+                                    .trouble-icon
+                                        img(src='i/trouble-2.png')
+                                    .trouble-item_caption Проблемы с заголовком H1
+                                    p Мы подскажем, есть ли он на всех страницах,                            не достаточно ли он короткий.
+                            li
+                                .trouble-item   
+                                    .trouble-icon
+                                        img(src='i/trouble-3.png')
+                                    .trouble-item_caption Топ ошибок
+                                    p Мы выделили для вас самые критичные ошибки,                             с которых необходимо начать работу над сайтом
+                            li
+                                .trouble-item   
+                                    .trouble-icon
+                                        img(src='i/trouble-4.png')
+                                    .trouble-item_caption Битые изображения
+                                    p Просканировав сайт мы подскажем, какие картинки                             являются битыми.
+                        
+                #info.slide_section.section-v4.forthPage(data-bs='i/section_4.jpg')
+                    .scroll-down_btn.scrollDown
+                    .section_inner
+                        .info-block
+                            h2.section_caption Какую информацию  <br>                 предоставит сервис?
+
+                            p Мы только запустили наш сервис и каждую минуту работаем над его улучшением. Но уже на данный момент мы можем предложить вам богатый набор данных, который поможет вам составить общую картинку о сайте.
+
+                #detailes.slide_section.section-v5.fifthPage(data-bs='i/section_5.jpg')
+                    .scroll-down_btn.scrollDown
+                    .section_inner
+                        .detailed-block
+                            h2.section_caption Подробная информация  <br>            о каждой странице
+
+                            p На ней мы расскажем об исходящих и входящих внутренних ссылках, исходящих внешних ссылках, размере и объеме картинок, всё о метатегах и конечно же об ошибках страницы. Мы рассчитаем индекс оптимизированности для каждой страницы, чтобы нагляднее было понятно, насколько всё хорошо со страницей.
+
+                #errors.slide_section.section-v6.sixthPage(data-bs='i/section_6.jpg')
+                    .scroll-down_btn.scrollDown
+                    .section_inner
+                        h2.section_caption Список ошибок сайта
+                        .errors-block
+                            p Здесь всё просто. Ошибки - это точки роста вашего сайта в поисковой выдачи. Именно эти ошибки мешают вашему сайту занимать более высокие позиции. Начните работу с сервисом именно с этой страницы!
+                        
+                #structure.slide_section.section-v7.seventhPage.selfSectionParent(data-bs='i/section_7.jpg' data-bs-1024='i/section_7_mob.jpg')
+                    .scroll-down_btn.scrollDown
+                    .section_inner
+                        .structure-block
+                            h2.section_caption Структура сайта
+                            p На этой странице вы сможете получить сводную данную по количеству страниц на каждом уровне вложенности и краткие данные по каждой проиндексированной странице.
+                            
+                        .audit-block.selfSection(data-self-section-id='audit' data-self-section='seventhPage2 section-v7-2', data-bs-1024='i/section_7_mob_2.jpg')
+                            h2.section_caption Аудит сайта
+                            p Аудит сайта - сводная страница, формируемая сервисом по итогам индексации сайта. На ней вы сможете отслеживать общий индекс оптимизированности сайта, а также контродировать общее состояние всех главных показателей сайта.
+                            
+
+                #subscribe.slide_section.section-v8.eighthPage(data-bs='i/section_8.jpg')
+                    .section_inner.text_center
+                        .subscribe-block.about-block
+                            h2.section_caption 
+                                span Попробуйте сервис в&nbsp;действии  <br> 
+                                span.mob_hidden прямо сейчас 
+                                span абсолютно бесплатно
+                            
+                            form(action='#')
+                                .form_row
+                                    .form_cell
+                                        input.f_input_v1(placeholder='Введите URL сайта')
+                                    .form_cell
+                                        button.btn_v1.check_btn.btn_red Начать проверку
+                        
+                            .reg-block
+                                p
+                                    a.inner-link(href='#')
+                                        span.inner-link_text Зарегистрироваться
+                            
+                            .question-block
+                                p
+                                    a.outer-link(href='#')
+                                        span.icon-help.outer-link_icon
+                                        span.outer-link_text Задать вопрос в тех. поддержку
+                                    
+                                p
+                                    a.outer-link(href='mailto:hello@progress.express')
+                                        span.icon-mail-envelope-closed.outer-link_icon
+                                        span.outer-link_text hello@progress.express
+                                
+                            
+                    
+        +scripts()
